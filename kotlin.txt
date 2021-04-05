@@ -1,0 +1,8 @@
+Если нам нужно возвращать много данных есть вариант возвращать лист.
+Но тогда придется ждать пока мы получим все объекты и сформируем лист.
+С одной стороны первая корутина посылает данные, а с другой стророны
+вторая корутина читает.
+
+shared mutable state -> shared by communicating
+synchronization primitives -> communication primitives (channels)
+class -> coroutines (to incapsulate our state)
