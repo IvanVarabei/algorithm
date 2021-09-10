@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>First project</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+</head>
+<body style="background: grey">
+<aside>hello</aside>
+<script>
+    function loadScript(src, callback) {
+        let script = document.createElement('script');
+        script.src = src;
+        script.onload = () => callback(null, script)
+        script.onerror = () => callback(
+            new Error(`Fail: ${src}`), script
+        )
+        document.head.append(script);
+    }
+    loadScript('js/test.js', function () {
+        //iterateArray(specSymbols, 1400, true)
+    })
+    loadScript('js/sandbox.js', () => {})
+</script>
+</body>
+</html>
+
